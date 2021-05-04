@@ -1,6 +1,6 @@
 const MODEL_URL = "/public/models";
-const input = document.getElementById('myImg')
-const useTinyModel = true;
+const input = document.getElementById('myImg');
+const output = document.getElementById('output');
 let state = "undetected";
 
 function getTop(l) {
@@ -57,6 +57,7 @@ Promise.all([
                         state = "right";
                     }
                 }
+                output.innerHTML = state;
             }
         } else {
             // Face was not detected
